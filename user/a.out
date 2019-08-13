@@ -1,0 +1,259 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 02 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, big endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           MIPS R3000
+  Version:                           0x1
+  Entry point address:               0x400000
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          55332 (bytes into file)
+  Flags:                             0x50001001, noreorder, o32, mips32
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         2
+  Size of section headers:           40 (bytes)
+  Number of section headers:         12
+  Section header string table index: 9
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text             PROGBITS        00400000 001000 005070 00  AX  0   0 16
+  [ 2] .reginfo          MIPS_REGINFO    00405070 006070 000018 18   A  0   0  4
+  [ 3] .data             PROGBITS        00406000 007000 005656 00  WA  0   0 4096
+  [ 4] .data.rel         PROGBITS        0040b658 00c658 000010 00  WA  0   0  4
+  [ 5] .data.rel.local   PROGBITS        0040b668 00c668 000058 00  WA  0   0  4
+  [ 6] .bss              NOBITS          0040b6c0 00c6c0 001780 00  WA  0   0 16
+  [ 7] .pdr              PROGBITS        00000000 00c6c0 001100 00      0   0  4
+  [ 8] .mdebug.abi32     PROGBITS        00000000 00d7c0 000000 00      0   0  1
+  [ 9] .shstrtab         STRTAB          00000000 00d7c0 000062 00      0   0  1
+  [10] .symtab           SYMTAB          00000000 00da04 000c50 10     11  56  4
+  [11] .strtab           STRTAB          00000000 00e654 000765 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings)
+  I (info), L (link order), G (group), T (TLS), E (exclude), x (unknown)
+  O (extra OS processing required) o (OS specific), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  REGINFO        0x006070 0x00405070 0x00405070 0x00018 0x00018 R   0x4
+  LOAD           0x001000 0x00400000 0x00400000 0x0b6c0 0x0ce40 RWE 0x1000
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .reginfo 
+   01     .text .reginfo .data .data.rel .data.rel.local .bss 
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+There are no unwind sections in this file.
+
+Symbol table '.symtab' contains 197 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00400000     0 SECTION LOCAL  DEFAULT    1 
+     2: 00405070     0 SECTION LOCAL  DEFAULT    2 
+     3: 00406000     0 SECTION LOCAL  DEFAULT    3 
+     4: 0040b658     0 SECTION LOCAL  DEFAULT    4 
+     5: 0040b668     0 SECTION LOCAL  DEFAULT    5 
+     6: 0040b6c0     0 SECTION LOCAL  DEFAULT    6 
+     7: 00000000     0 SECTION LOCAL  DEFAULT    7 
+     8: 00000000     0 SECTION LOCAL  DEFAULT    8 
+     9: 00000000     0 SECTION LOCAL  DEFAULT    9 
+    10: 00000000     0 SECTION LOCAL  DEFAULT   10 
+    11: 00000000     0 SECTION LOCAL  DEFAULT   11 
+    12: 00000000     0 FILE    LOCAL  DEFAULT  ABS entry.S
+    13: 00000000     0 FILE    LOCAL  DEFAULT  ABS syscall_wrap.S
+    14: 00000000     0 FILE    LOCAL  DEFAULT  ABS init.c
+    15: 00000000     0 FILE    LOCAL  DEFAULT  ABS printf.c
+    16: 00400320   148 FUNC    LOCAL  DEFAULT    1 user_myoutput
+    17: 00000000     0 FILE    LOCAL  DEFAULT  ABS print.c
+    18: 0040a770    30 OBJECT  LOCAL  DEFAULT    3 user_theFatalMsg
+    19: 00000000     0 FILE    LOCAL  DEFAULT  ABS libos.c
+    20: 00000000     0 FILE    LOCAL  DEFAULT  ABS fork.c
+    21: 00400e2c   272 FUNC    LOCAL  DEFAULT    1 pgfault
+    22: 00400f3c   268 FUNC    LOCAL  DEFAULT    1 duppage
+    23: 00000000     0 FILE    LOCAL  DEFAULT  ABS pgfault.c
+    24: 00000000     0 FILE    LOCAL  DEFAULT  ABS syscall_lib.c
+    25: 00000000     0 FILE    LOCAL  DEFAULT  ABS ipc.c
+    26: 00000000     0 FILE    LOCAL  DEFAULT  ABS string.c
+    27: 00000000     0 FILE    LOCAL  DEFAULT  ABS fd.c
+    28: 0040b658    16 OBJECT  LOCAL  DEFAULT    4 devtab
+    29: 00000000     0 FILE    LOCAL  DEFAULT  ABS pageref.c
+    30: 00000000     0 FILE    LOCAL  DEFAULT  ABS file.c
+    31: 004021bc   116 FUNC    LOCAL  DEFAULT    1 file_read
+    32: 00402358   172 FUNC    LOCAL  DEFAULT    1 file_write
+    33: 004020e8   212 FUNC    LOCAL  DEFAULT    1 file_close
+    34: 00402404    84 FUNC    LOCAL  DEFAULT    1 file_stat
+    35: 00000000     0 FILE    LOCAL  DEFAULT  ABS fsipc.c
+    36: 00402630    96 FUNC    LOCAL  DEFAULT    1 fsipc
+    37: 00000000     0 FILE    LOCAL  DEFAULT  ABS wait.c
+    38: 00000000     0 FILE    LOCAL  DEFAULT  ABS spawn.c
+    39: 00000000     0 FILE    LOCAL  DEFAULT  ABS pipe.c
+    40: 004033ac   248 FUNC    LOCAL  DEFAULT    1 piperead
+    41: 004034a4   256 FUNC    LOCAL  DEFAULT    1 pipewrite
+    42: 004035ac    68 FUNC    LOCAL  DEFAULT    1 pipeclose
+    43: 004035a4     8 FUNC    LOCAL  DEFAULT    1 pipestat
+    44: 004032f8   124 FUNC    LOCAL  DEFAULT    1 _pipeisclosed
+    45: 00000000     0 FILE    LOCAL  DEFAULT  ABS console.c
+    46: 00403684   168 FUNC    LOCAL  DEFAULT    1 cons_read
+    47: 0040372c   176 FUNC    LOCAL  DEFAULT    1 cons_write
+    48: 004037dc     8 FUNC    LOCAL  DEFAULT    1 cons_close
+    49: 004037e4    40 FUNC    LOCAL  DEFAULT    1 cons_stat
+    50: 00000000     0 FILE    LOCAL  DEFAULT  ABS fprintf.c
+    51: 00403810    72 FUNC    LOCAL  DEFAULT    1 user_out2string
+    52: 00000000     0 FILE    LOCAL  DEFAULT  ABS fs.c
+    53: 00000000     0 FILE    LOCAL  DEFAULT  ABS ide.c
+    54: 00000000     0 FILE    LOCAL  DEFAULT  ABS test.c
+    55: 0040b6bc     4 OBJECT  LOCAL  DEFAULT    5 msg
+    56: 00401688   104 FUNC    GLOBAL DEFAULT    1 ipc_recv
+    57: 0040471c    36 FUNC    GLOBAL DEFAULT    1 file_open
+    58: 00404970   124 FUNC    GLOBAL DEFAULT    1 fs_sync
+    59: 00401714    32 FUNC    GLOBAL DEFAULT    1 strcpy
+    60: 004019c0    16 FUNC    GLOBAL DEFAULT    1 num2fd
+    61: 00404478   208 FUNC    GLOBAL DEFAULT    1 dir_alloc_file
+    62: 00402940   592 FUNC    GLOBAL DEFAULT    1 init_stack
+    63: 00402b90    24 FUNC    GLOBAL DEFAULT    1 usr_is_elf_format
+    64: 004019b0    16 FUNC    GLOBAL DEFAULT    1 fd2num
+    65: 00403914    84 FUNC    GLOBAL DEFAULT    1 va_is_mapped
+    66: 0040b684    28 OBJECT  GLOBAL DEFAULT    5 devpipe
+    67: 004027bc    48 FUNC    GLOBAL DEFAULT    1 fsipc_close
+    68: 0040270c   120 FUNC    GLOBAL DEFAULT    1 fsipc_map
+    69: 00405070     0 NOTYPE  GLOBAL DEFAULT  ABS _etext
+    70: 004018ac   116 FUNC    GLOBAL DEFAULT    1 fd_alloc
+    71: 0040ce34     4 OBJECT  GLOBAL DEFAULT    6 bitmap
+    72: 00404a90   264 FUNC    GLOBAL DEFAULT    1 ide_read
+    73: 004012d4    48 FUNC    GLOBAL DEFAULT    1 syscall_getenvid
+    74: 00401780    48 FUNC    GLOBAL DEFAULT    1 memcpy
+    75: 00402884    44 FUNC    GLOBAL DEFAULT    1 fsipc_sync
+    76: 0040147c    52 FUNC    GLOBAL DEFAULT    1 syscall_set_trapframe
+    77: 00401448    52 FUNC    GLOBAL DEFAULT    1 syscall_set_env_status
+    78: 0040800c     0 OBJECT  GLOBAL DEFAULT    3 vpd
+    79: 004047c8   200 FUNC    GLOBAL DEFAULT    1 file_truncate
+    80: 004025ec    28 FUNC    GLOBAL DEFAULT    1 remove
+    81: 004048ec   132 FUNC    GLOBAL DEFAULT    1 file_flush
+    82: 004000f8    80 FUNC    GLOBAL DEFAULT    1 sum
+    83: 00400148   472 FUNC    GLOBAL DEFAULT    1 umain
+    84: 0040154c    48 FUNC    GLOBAL DEFAULT    1 syscall_cgetc
+    85: 004015b4    56 FUNC    GLOBAL DEFAULT    1 syscall_read_dev
+    86: 00408000     0 OBJECT  GLOBAL DEFAULT    3 envs
+    87: 0040ce38     4 OBJECT  GLOBAL DEFAULT    6 super
+    88: 00403150    40 FUNC    GLOBAL DEFAULT    1 spawnl
+    89: 00408010     0 OBJECT  GLOBAL DEFAULT    3 __pgfault_handler
+    90: 00403968    52 FUNC    GLOBAL DEFAULT    1 block_is_mapped
+    91: 00404740   136 FUNC    GLOBAL DEFAULT    1 file_create
+    92: 00402458   404 FUNC    GLOBAL DEFAULT    1 ftruncate
+    93: 00401ce0   136 FUNC    GLOBAL DEFAULT    1 readn
+    94: 00403adc   280 FUNC    GLOBAL DEFAULT    1 read_block
+    95: 00401304    48 FUNC    GLOBAL DEFAULT    1 syscall_yield
+    96: 00404198    44 FUNC    GLOBAL DEFAULT    1 fs_init
+    97: 00401364    56 FUNC    GLOBAL DEFAULT    1 syscall_set_pgfault_handl
+    98: 004035f0    56 FUNC    GLOBAL DEFAULT    1 iscons
+    99: 00401334    48 FUNC    GLOBAL DEFAULT    1 syscall_env_destroy
+   100: 00403180   376 FUNC    GLOBAL DEFAULT    1 pipe
+   101: 00402db8   920 FUNC    GLOBAL DEFAULT    1 spawn
+   102: 00403a04    68 FUNC    GLOBAL DEFAULT    1 map_block
+   103: 00401988    40 FUNC    GLOBAL DEFAULT    1 fd2data
+   104: 00401920    32 FUNC    GLOBAL DEFAULT    1 fd_close
+   105: 00400460  1388 FUNC    GLOBAL DEFAULT    1 user_lp_Print
+   106: 00403c7c    88 FUNC    GLOBAL DEFAULT    1 block_is_free
+   107: 0040157c    56 FUNC    GLOBAL DEFAULT    1 syscall_write_dev
+   108: 00400d80   128 FUNC    GLOBAL DEFAULT    1 user_bcopy
+   109: 00401d68   204 FUNC    GLOBAL DEFAULT    1 write
+   110: 00402ba8   528 FUNC    GLOBAL DEFAULT    1 usr_load_elf
+   111: 00404548    40 FUNC    GLOBAL DEFAULT    1 skip_slash
+   112: 00401e70   108 FUNC    GLOBAL DEFAULT    1 fstat
+   113: 0040139c    56 FUNC    GLOBAL DEFAULT    1 syscall_mem_alloc
+   114: 004042f0    76 FUNC    GLOBAL DEFAULT    1 file_clear_block
+   115: 0040ce40     0 NOTYPE  GLOBAL DEFAULT  ABS end
+   116: 004028b0   140 FUNC    GLOBAL DEFAULT    1 wait
+   117: 00400000     0 OBJECT  GLOBAL DEFAULT    1 _start
+   118: 004027ec    56 FUNC    GLOBAL DEFAULT    1 fsipc_dirty
+   119: 00401bec   244 FUNC    GLOBAL DEFAULT    1 read
+   120: 00403cd4    80 FUNC    GLOBAL DEFAULT    1 free_block
+   121: 004000d0    40 FUNC    GLOBAL DEFAULT    1 MY_MUL
+   122: 00401820   140 FUNC    GLOBAL DEFAULT    1 dev_lookup
+   123: 00404390    60 FUNC    GLOBAL DEFAULT    1 file_dirty
+   124: 00402608    28 FUNC    GLOBAL DEFAULT    1 sync
+   125: 00403374    56 FUNC    GLOBAL DEFAULT    1 pipeisclosed
+   126: 0040b6c0  6000 OBJECT  GLOBAL DEFAULT    6 bss
+   127: 00400e00    44 FUNC    GLOBAL DEFAULT    1 user_bzero
+   128: 00402690   124 FUNC    GLOBAL DEFAULT    1 fsipc_open
+   129: 00402230   296 FUNC    GLOBAL DEFAULT    1 read_map
+   130: 00403a48   148 FUNC    GLOBAL DEFAULT    1 unmap_block
+   131: 004015f0   152 FUNC    GLOBAL DEFAULT    1 ipc_send
+   132: 00401048   436 FUNC    GLOBAL DEFAULT    1 fork
+   133: 004049ec    56 FUNC    GLOBAL DEFAULT    1 file_close
+   134: 004003f0   100 FUNC    GLOBAL DEFAULT    1 _user_panic
+   135: 004000c0    16 FUNC    GLOBAL DEFAULT    1 msyscall
+   136: 00400000     0 NOTYPE  GLOBAL DEFAULT  ABS _text
+   137: 0040151c    48 FUNC    GLOBAL DEFAULT    1 syscall_ipc_recv
+   138: 0040b656     0 NOTYPE  GLOBAL DEFAULT  ABS __bss_start
+   139: 00409000  6000 OBJECT  GLOBAL DEFAULT    3 data
+   140: 004039bc    72 FUNC    GLOBAL DEFAULT    1 block_is_dirty
+   141: 0040b668    28 OBJECT  GLOBAL DEFAULT    5 devfile
+   142: 004003b4    60 FUNC    GLOBAL DEFAULT    1 writef
+   143: 00401e34    60 FUNC    GLOBAL DEFAULT    1 seek
+   144: 00400014     0 OBJECT  GLOBAL DEFAULT    1 __asm_pgfault_handler
+   145: 00403bf4   136 FUNC    GLOBAL DEFAULT    1 write_block
+   146: 0040b6a0    28 OBJECT  GLOBAL DEFAULT    5 devcons
+   147: 004017b0   100 FUNC    GLOBAL DEFAULT    1 strcmp
+   148: 0040402c   364 FUNC    GLOBAL DEFAULT    1 check_write_block
+   149: 00401a70   380 FUNC    GLOBAL DEFAULT    1 dup
+   150: 00403d24   204 FUNC    GLOBAL DEFAULT    1 alloc_block_num
+   151: 004012a0    52 FUNC    GLOBAL DEFAULT    1 syscall_putchar
+   152: 00400cfc   124 FUNC    GLOBAL DEFAULT    1 libmain
+   153: 004011fc    32 FUNC    GLOBAL DEFAULT    1 sfork
+   154: 00402824    96 FUNC    GLOBAL DEFAULT    1 fsipc_remove
+   155: 0040ce3c     4 OBJECT  GLOBAL DEFAULT    6 nbitmap
+   156: 00406000     0 OBJECT  GLOBAL DEFAULT    3 fsipcbuf
+   157: 004009cc   128 FUNC    GLOBAL DEFAULT    1 user_PrintChar
+   158: 00403e40   176 FUNC    GLOBAL DEFAULT    1 read_super
+   159: 0040399c    32 FUNC    GLOBAL DEFAULT    1 va_is_dirty
+   160: 0040ce30     4 OBJECT  GLOBAL DEFAULT    6 env
+   161: 00403ef0   316 FUNC    GLOBAL DEFAULT    1 read_bitmap
+   162: 00407000     0 OBJECT  GLOBAL DEFAULT    3 fdtab
+   163: 00402784    56 FUNC    GLOBAL DEFAULT    1 fsipc_set_size
+   164: 00401a34    60 FUNC    GLOBAL DEFAULT    1 close_all
+   165: 00408008     0 OBJECT  GLOBAL DEFAULT    3 vpt
+   166: 00404a24    96 FUNC    GLOBAL DEFAULT    1 file_remove
+   167: 00404570   428 FUNC    GLOBAL DEFAULT    1 walk_path
+   168: 00401edc    88 FUNC    GLOBAL DEFAULT    1 stat
+   169: 0040b656     0 NOTYPE  GLOBAL DEFAULT  ABS _edata
+   170: 00404270   128 FUNC    GLOBAL DEFAULT    1 file_map_block
+   171: 00400a4c   264 FUNC    GLOBAL DEFAULT    1 user_PrintString
+   172: 004038c0    84 FUNC    GLOBAL DEFAULT    1 diskaddr
+   173: 00400ce0    28 FUNC    GLOBAL DEFAULT    1 exit
+   174: 0040433c    84 FUNC    GLOBAL DEFAULT    1 file_get_block
+   175: 00404890    92 FUNC    GLOBAL DEFAULT    1 file_set_size
+   176: 00401220   124 FUNC    GLOBAL DEFAULT    1 set_pgfault_handler
+   177: 004043cc   172 FUNC    GLOBAL DEFAULT    1 dir_lookup
+   178: 004014b0    48 FUNC    GLOBAL DEFAULT    1 syscall_panic
+   179: 004041c4   172 FUNC    GLOBAL DEFAULT    1 file_block_walk
+   180: 00400b54   384 FUNC    GLOBAL DEFAULT    1 user_PrintNum
+   181: 004016f0    36 FUNC    GLOBAL DEFAULT    1 strlen
+   182: 00401fb0   312 FUNC    GLOBAL DEFAULT    1 open
+   183: 00401414    52 FUNC    GLOBAL DEFAULT    1 syscall_mem_unmap
+   184: 00404d14   852 FUNC    GLOBAL DEFAULT    1 fs_test
+   185: 004013d4    64 FUNC    GLOBAL DEFAULT    1 syscall_mem_map
+   186: 00401734    76 FUNC    GLOBAL DEFAULT    1 strchr
+   187: 004014e0    60 FUNC    GLOBAL DEFAULT    1 syscall_ipc_can_send
+   188: 00401940    72 FUNC    GLOBAL DEFAULT    1 fd_lookup
+   189: 00403858    92 FUNC    GLOBAL DEFAULT    1 fwritef
+   190: 00403628    92 FUNC    GLOBAL DEFAULT    1 opencons
+   191: 00401f40   112 FUNC    GLOBAL DEFAULT    1 pageref
+   192: 00408004     0 OBJECT  GLOBAL DEFAULT    3 pages
+   193: 00403df0    80 FUNC    GLOBAL DEFAULT    1 alloc_block
+   194: 004019d0   100 FUNC    GLOBAL DEFAULT    1 close
+   195: 00404b98   324 FUNC    GLOBAL DEFAULT    1 ide_write
+   196: 00404ce0    52 FUNC    GLOBAL DEFAULT    1 strecmp
+
+No version information found in this file.

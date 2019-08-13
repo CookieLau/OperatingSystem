@@ -1,0 +1,5 @@
+[lab6 9d05d9a] fix_
+ 37 files changed, 342 insertions(+), 17 deletions(-)
+ create mode 100644 _bug
+ rename user/{spawn.c.bak => spawn.c} (100%)
+ create mode 100644 user/spawn.c.tt
