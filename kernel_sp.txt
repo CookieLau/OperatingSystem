@@ -1,0 +1,7 @@
+./include/stackframe.h:166:	lw	sp, KERNEL_SP
+./lib/kclock_asm.S:22:	sw	sp, KERNEL_SP
+./lib/env_asm.S:6:			.global	KERNEL_SP;
+./lib/env_asm.S:7:KERNEL_SP:
+./lib/syscall_all.c:8:extern char *KERNEL_SP;
+./lib/env.c:20:extern char *KERNEL_SP;
+./lib/env.c:424:		bcopy((void *)KERNEL_SP - sizeof(struct Trapframe),
